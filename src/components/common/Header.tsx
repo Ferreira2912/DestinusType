@@ -1,0 +1,48 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+  
+  return (
+    <header className="main-header">
+      <div className="header-container">
+        <div className="logo" id="logo">
+          <Link href="/">
+            <Image 
+              src="./assets/images/logo-destinus.svg" 
+              alt="Destinus" 
+              className="logo-img" 
+              width={180}
+              height={60}
+            />
+          </Link>
+        </div>
+        
+        <nav className={`main-nav ${mobileMenuOpen ? 'open' : ''}`}>
+          <ul>
+            <li><Link href="/" className="nav-link active">Home</Link></li>
+            <li><Link href="/pacotes" className="nav-link">Pacotes</Link></li>
+            <li><Link href="/blog" className="nav-link">Blog</Link></li>
+            <li><Link href="/sobre" className="nav-link">Sobre Nós</Link></li>
+          </ul>
+        </nav>
+        
+        <div className="header-cta">
+          <button className="cta-button pulse">FALE COM UM ESPECIALISTA</button>
+        </div>
+        
+        <div className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+          <div className="hamburger"></div>
+        </div>
+      </div>
+    </header>
+  );
+}
