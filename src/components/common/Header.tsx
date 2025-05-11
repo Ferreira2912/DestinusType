@@ -1,23 +1,41 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      // Make header sticky after scrolling 50px
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
   
   return (
-    <header className="main-header">
+    <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo" id="logo">
           <Link href="/">
             <Image
-              src= "/assets/images/logo.svg"
+              src="/assets/images/logo.svg"
               alt="Destinus"
               className="logo-img"
               width={180}

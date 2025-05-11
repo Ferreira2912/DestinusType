@@ -13,15 +13,17 @@ export default function BlogSection() {
         {/* Post 1 */}
         <div className="blog-card">
           <div className="blog-image">
+            <span className="blog-categoria">Dicas</span>
             <Image
-              src="/assets/images/blog-1.jpg" // Updated path from /images/ to /assets/images/
+              src="/assets/images/blog-1.webp"
               alt="Dicas para viagens de ônibus"
               width={400}
-              height={250}
+              height={200}
               sizes="100vw"
               style={{
                 width: "100%",
-                height: "auto"
+                height: "100%",
+                objectFit: "cover"
               }} />
             <div className="blog-overlay"></div>
           </div>
@@ -38,20 +40,22 @@ export default function BlogSection() {
         {/* Post 2 */}
         <div className="blog-card">
           <div className="blog-image">
+            <span className="blog-categoria">Destinos</span>
             <Image
-              src="/assets/images/blog-2.jpg" // Updated path from /images/ to /assets/images/
+              src="/assets/images/blog-2.webp"
               alt="Destinos nacionais"
               width={400}
-              height={250}
+              height={200}
               sizes="100vw"
               style={{
                 width: "100%",
-                height: "auto"
+                height: "100%",
+                objectFit: "cover"
               }} />
             <div className="blog-overlay"></div>
           </div>
           <div className="blog-info">
-            <h3>5 Destinos Nacionais Perfeitos para Viajar em 2025</h3>
+            <h3>5 Destinos Nacionais Perfeitos para 2025</h3>
             <p className="blog-resumo">Confira nossa seleção dos melhores destinos brasileiros para visitar este ano...</p>
             <div className="blog-meta">
               <span className="blog-data">02 MAI 2025</span>
@@ -63,27 +67,29 @@ export default function BlogSection() {
         {/* Post 3 */}
         <div className="blog-card">
           <div className="blog-image">
+            <span className="blog-categoria">Economia</span>
             <Image
-              src="/assets/images/blog-3.jpg" // Updated path from /images/ to /assets/images/
+              src="/assets/images/blog-3.webp"
               alt="Economizar em viagens"
               width={400}
-              height={250}
+              height={200}
               sizes="100vw"
               style={{
                 width: "100%",
-                height: "auto"
+                height: "100%",
+                objectFit: "cover"
               }} />
             <div className="blog-overlay"></div>
           </div>
           <div className="blog-info">
-            <h3>Como Economizar em Pacotes de Viagem sem Perder Qualidade</h3>
+            <h3>Como Economizar em Pacotes de Viagem</h3>
             <p className="blog-resumo">Estratégias inteligentes para gastar menos e aproveitar mais suas férias...</p>
             <div className="blog-meta">
               <span className="blog-data">20 ABR 2025</span>
               <span className="blog-tempo">6 MIN LEITURA</span>
             </div>
           </div>
-      </div>
+        </div>
       </div>
       <div className="section-cta">
         <Link className="cta-button2" href="/blog">

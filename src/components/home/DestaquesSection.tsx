@@ -15,7 +15,7 @@ export default function DestaquesSection() {
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
             <Image
-              src="/assets/images/pacote-1.jpg" // Updated path to match folder structure
+              src="/assets/images/pacote-1.webp" // Updated path to match folder structure
               alt="Pantanal"
               width={400}
               height={250}
@@ -47,7 +47,7 @@ export default function DestaquesSection() {
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
             <Image
-              src="/assets/images/pacote-2.jpg" // Updated path to match folder structure
+              src="/assets/images/pacote-2.webp" // Updated path to match folder structure
               alt="Aparecida e Rio de Janeiro"
               width={400}
               height={250}
@@ -79,7 +79,7 @@ export default function DestaquesSection() {
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
             <Image
-              src="/assets/images/pacote-3.jpg" // Updated path to match folder structure
+              src="/assets/images/pacote-3.webp" // Updated path to match folder structure
               alt="Ametista do Sul"
               width={400}
               height={250}

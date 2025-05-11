@@ -6,19 +6,19 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: '/assets/images/hero-1.jpg',
+    image: '/assets/images/hero-1.webp',
     title: 'DESCUBRA O BRASIL <span>DE ÔNIBUS</span>',
     description: 'Pacotes rodoviários com conforto, segurança e o melhor custo-benefício'
   },
   {
     id: 2,
-    image: '/assets/images/hero-2.jpg',
+    image: '/assets/images/hero-2.webp',
     title: 'VIAGENS AÉREAS <span>COM DESCONTO</span>',
     description: 'As melhores tarifas aéreas combinadas com hospedagens exclusivas'
   },
   {
     id: 3,
-    image: '/assets/images/hero-3.jpg',
+    image: '/assets/images/hero-3.webp',
     title: 'CRUZEIROS <span>INESQUECÍVEIS</span>',
     description: 'Navegue pelos melhores destinos com todo conforto e luxo dos navios mais modernos'
   }

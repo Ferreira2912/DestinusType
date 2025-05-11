@@ -42,6 +42,7 @@ body {
     color: var(--light-color);
     overflow-x: hidden;
     line-height: 1.6;
+    padding-top: 80px;
 }
 
 /* Tipografia */
@@ -130,22 +131,34 @@ section {
 
 /* Header */
 .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 0;
-    z-index: 1000;
-    transition: var(--transition-medium);
+  position: fixed;
+  top: 0; /* Changed from 15px to 0 to make the header flush with top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px; /* Added explicit height */
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 10, 20, 0.8); /* Make initial background more visible */
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.main-header.scrolled {
+  background-color: rgba(0, 10, 20, 0.95); /* More opaque when scrolled */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  display: flex;
+  justify-content: space-between; /* Changed from space-around to space-between */
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
 }
 
 .logo {
@@ -164,17 +177,18 @@ section {
 }
 
 .main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin-left: 15rem;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0; /* Reset margin */
+  padding-bottom: 8px; /* Add padding at bottom of links for spacing */
 }
 
 .nav-link {
-    position: relative;
-    padding: 0.5rem 0;
-    font-weight: 500;
-    transition: var(--transition-fast);
+  position: relative;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: var(--transition-fast);
 }
 
 .nav-link::after {
@@ -233,6 +247,8 @@ section {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    margin-top: -80px; /* Same as body padding-top, creates a seamless look */
+   padding-top: 80px;
 }
 
 .hero-slider {
