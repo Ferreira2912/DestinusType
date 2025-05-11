@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,13 +16,16 @@ export default function Header() {
       <div className="header-container">
         <div className="logo" id="logo">
           <Link href="/">
-            <Image 
-              src="./assets/images/logo-destinus.svg" 
-              alt="Destinus" 
-              className="logo-img" 
+            <Image
+              src= "/assets/images/logo.svg"
+              alt="Destinus"
+              className="logo-img"
               width={180}
               height={60}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
         </div>
         

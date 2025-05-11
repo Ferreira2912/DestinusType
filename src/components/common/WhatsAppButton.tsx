@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function WhatsAppButton() {
   return (
@@ -9,12 +9,15 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image 
-        src="/assets/icons/whatsapp-icon-large.svg" 
-        alt="WhatsApp" 
+      <Image
+        src="/assets/icons/whatsapp-icon-large.svg"
+        alt="WhatsApp"
         width={60}
         height={60}
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
     </Link>
   );
 }

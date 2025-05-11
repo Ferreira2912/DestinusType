@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ContatoSection() {
   const [formData, setFormData] = useState({
@@ -44,16 +44,18 @@ export default function ContatoSection() {
         <h2>FALE <span>CONOSCO</span></h2>
         <p>Tire suas dúvidas ou solicite um orçamento personalizado</p>
       </div>
-      
       <div className="contato-container">
         <div className="contato-info">
           <div className="info-item">
-            <Image 
-              src="/assets/icons/email-icon.svg" 
-              alt="Email" 
-              width={24} 
-              height={24} 
-            />
+            <Image
+              src="/assets/icons/email-icon.svg"
+              alt="Email"
+              width={24}
+              height={24}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <div>
               <h4>Email</h4>
               <p>contato@destinus.com.br</p>
@@ -61,12 +63,15 @@ export default function ContatoSection() {
           </div>
           
           <div className="info-item">
-            <Image 
-              src="/assets/icons/whatsapp-icon.svg" 
-              alt="WhatsApp" 
-              width={24} 
-              height={24} 
-            />
+            <Image
+              src="/assets/icons/whatsapp-icon.svg"
+              alt="WhatsApp"
+              width={24}
+              height={24}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <div>
               <h4>WhatsApp</h4>
               <p>(11) 98765-4321</p>
@@ -74,12 +79,15 @@ export default function ContatoSection() {
           </div>
           
           <div className="info-item">
-            <Image 
-              src="/assets/icons/clock-icon.svg" 
-              alt="Horário" 
-              width={24} 
-              height={24} 
-            />
+            <Image
+              src="/assets/icons/clock-icon.svg"
+              alt="Horário"
+              width={24}
+              height={24}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <div>
               <h4>Horário de Atendimento</h4>
               <p>Segunda a Sexta: 9h às 18h<br />Sábado: 9h às 13h</p>

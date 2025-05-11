@@ -1,24 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 
 const slides = [
   {
     id: 1,
-    image: '/assets/images/hero-1.jpg', // Added missing image property with correct path
+    image: '/assets/images/hero-1.jpg',
     title: 'DESCUBRA O BRASIL <span>DE ÔNIBUS</span>',
     description: 'Pacotes rodoviários com conforto, segurança e o melhor custo-benefício'
   },
   {
     id: 2,
-    image: '/assets/images/hero-2.jpg', // Updated path to correct folder structure
+    image: '/assets/images/hero-2.jpg',
     title: 'VIAGENS AÉREAS <span>COM DESCONTO</span>',
     description: 'As melhores tarifas aéreas combinadas com hospedagens exclusivas'
   },
   {
     id: 3,
-    image: '/assets/images/hero-3.jpg', // Updated path to correct folder structure
+    image: '/assets/images/hero-3.jpg',
     title: 'CRUZEIROS <span>INESQUECÍVEIS</span>',
     description: 'Navegue pelos melhores destinos com todo conforto e luxo dos navios mais modernos'
   }
@@ -82,11 +82,12 @@ export default function HeroSection() {
           </div>
           <button className="slider-next" onClick={nextSlide}>&gt;</button>
         </div>
-        
-        <div className="scroll-indicator">
-          <span>Scroll</span>
-          <div className="arrow-down"></div>
-        </div>
+      </div>
+      
+      {/* Moved the scroll indicator outside the slider-controls */}
+      <div className="scroll-indicator">
+        <span>Scroll</span>
+        <div className="arrow-down"></div>
       </div>
     </section>
   );

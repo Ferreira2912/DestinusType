@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 export default function DestaquesSection() {
@@ -9,19 +9,21 @@ export default function DestaquesSection() {
         <h2>PACOTES <span>EM DESTAQUE</span></h2>
         <p>Os pacotes mais procurados pelos nossos clientes</p>
       </div>
-      
       <div className="pacotes-grid">
         {/* Pacote 1 */}
         <div className="pacote-card rodoviario">
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
-            <Image 
-              src="/images/pacote-1.jpg"
+            <Image
+              src="/assets/images/pacote-1.jpg" // Updated path to match folder structure
               alt="Pantanal"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="pacote-overlay"></div>
           </div>
           <div className="pacote-info">
@@ -44,13 +46,16 @@ export default function DestaquesSection() {
         <div className="pacote-card rodoviario">
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
-            <Image 
-              src="/images/pacote-2.jpg"
+            <Image
+              src="/assets/images/pacote-2.jpg" // Updated path to match folder structure
               alt="Aparecida e Rio de Janeiro"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="pacote-overlay"></div>
           </div>
           <div className="pacote-info">
@@ -73,13 +78,16 @@ export default function DestaquesSection() {
         <div className="pacote-card aereo">
           <div className="pacote-badge">RODOVIÁRIO</div>
           <div className="pacote-image">
-            <Image 
-              src="/images/pacote-3.jpg"
+            <Image
+              src="/assets/images/pacote-3.jpg" // Updated path to match folder structure
               alt="Ametista do Sul"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="pacote-overlay"></div>
           </div>
           <div className="pacote-info">
@@ -98,7 +106,6 @@ export default function DestaquesSection() {
           </div>
         </div>
       </div>
-      
       <div className="section-cta">
         <Link className="cta-button2" href="/pacotes">
           VER TODOS OS PACOTES

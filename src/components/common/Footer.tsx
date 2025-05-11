@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,8 +10,24 @@ export default function Footer() {
           <p>Sua jornada começa aqui</p>
           
           <div className="social-icons">
-            <a href="#"><Image src="/assets/icons/facebook-icon.svg" alt="Facebook" width={24} height={24} /></a>
-            <a href="#"><Image src="/assets/icons/instagram-icon.svg" alt="Instagram" width={24} height={24} /></a>
+            <a href="#"><Image
+              src="/assets/icons/facebook-icon.svg"
+              alt="Facebook"
+              width={24}
+              height={24}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} /></a>
+            <a href="#"><Image
+              src="/assets/icons/instagram-icon.svg"
+              alt="Instagram"
+              width={24}
+              height={24}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} /></a>
           </div>
         </div>
         
@@ -48,13 +64,36 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
       <div className="footer-bottom">
         <p>© 2025 Destinus Turismo. Todos os direitos reservados.</p>
         <div className="payment-methods">
-          <Image src="/assets/icons/visa-icon.svg" alt="Visa" width={40} height={25} />
-          <Image src="/assets/icons/mastercard-icon.svg" alt="Mastercard" width={40} height={25} />
-          <Image src="/assets/icons/pix-icon.svg" alt="Pix" width={40} height={25} />
+          <Image
+            src="/assets/icons/visa-icon.svg"
+            alt="Visa"
+            width={40}
+            height={25}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
+          <Image
+            src="/assets/icons/mastercard-icon.svg"
+            alt="Mastercard"
+            width={40}
+            height={25}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
+          <Image
+            src="/assets/icons/pix-icon.svg"
+            alt="Pix"
+            width={40}
+            height={25}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 export default function BlogSection() {
@@ -9,18 +9,20 @@ export default function BlogSection() {
         <h2>DICAS E <span>NOTÍCIAS</span></h2>
         <p>Confira nossas últimas publicações para planejar sua viagem</p>
       </div>
-      
       <div className="blog-grid">
         {/* Post 1 */}
         <div className="blog-card">
           <div className="blog-image">
-            <Image 
-              src="/images/blog-1.jpg" 
-              alt="Dicas para viagens de ônibus" 
+            <Image
+              src="/assets/images/blog-1.jpg" // Updated path from /images/ to /assets/images/
+              alt="Dicas para viagens de ônibus"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="blog-overlay"></div>
           </div>
           <div className="blog-info">
@@ -36,13 +38,16 @@ export default function BlogSection() {
         {/* Post 2 */}
         <div className="blog-card">
           <div className="blog-image">
-            <Image 
-              src="/images/blog-2.jpg" 
-              alt="Destinos nacionais" 
+            <Image
+              src="/assets/images/blog-2.jpg" // Updated path from /images/ to /assets/images/
+              alt="Destinos nacionais"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="blog-overlay"></div>
           </div>
           <div className="blog-info">
@@ -58,13 +63,16 @@ export default function BlogSection() {
         {/* Post 3 */}
         <div className="blog-card">
           <div className="blog-image">
-            <Image 
-              src="/images/blog-3.jpg" 
-              alt="Economizar em viagens" 
+            <Image
+              src="/assets/images/blog-3.jpg" // Updated path from /images/ to /assets/images/
+              alt="Economizar em viagens"
               width={400}
               height={250}
-              layout="responsive"
-            />
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto"
+              }} />
             <div className="blog-overlay"></div>
           </div>
           <div className="blog-info">
@@ -75,9 +83,8 @@ export default function BlogSection() {
               <span className="blog-tempo">6 MIN LEITURA</span>
             </div>
           </div>
-        </div>
       </div>
-
+      </div>
       <div className="section-cta">
         <Link className="cta-button2" href="/blog">
           VER TODOS OS ARTIGOS
